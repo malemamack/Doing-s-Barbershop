@@ -1,0 +1,150 @@
+<!-- I have already made navigation bar so please watch part 1 of this series I am just going to copy all the code  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doing's Barbershop</title>
+
+    <!-- adding css  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- about css  -->
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <!-- mediaQuery css  -->
+    <link rel="stylesheet" href="./css/MediaQuery.css">
+
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/7a6c6b42a6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="img/logo.jpg" width="100px" style="border-radius: 50%;"  alt=""></a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./protfolio.html">protfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="tel:+27647844356" id="NavNum">+27 64 784 4356</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="sectionFirst">
+        <h1>Contact Us</h1>
+
+        <!-- transparent Img -->
+        <section class="transform-img">
+            <img src="./img/background180.svg" alt="">
+        </section>
+    </section>
+
+
+    <!-- second section  -->
+    <section class="FormMap">
+        <div class="form">
+            <div class="f-head">Get In Touch</div>
+            <div class="f-para">Lorem ipsum dolor sit amet, elit. Explicabo?</div>
+    
+            <form onsubmit="sendWhatsAppMessage(event)">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="number" id="number" placeholder="Number" required>
+                <select id="service">
+                    <option value="" disabled selected>Select Services</option>
+                    <option value="Clean Nail Art">Clean Nail Art</option>
+                    <option value="Hair Styling">Hair Styling</option>
+                    <option value="Full Body Massage">Full Body Massage</option>
+                </select>
+                <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit">Send Request via WhatsApp</button>
+            </form>
+        </div>
+    
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.522711143407!2d29.776721073200324!3d-23.90653777436004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6c9e7efff9431%3A0x1610d94ca3200896!2sDoing%20barbershop!5e0!3m2!1sen!2sza!4v1730897010236!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <div class="beforefooter">
+        <div class="box">
+            <div class="logo">Doing's Barbershop</div>
+            <div class="bf-text">Quick Links</div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./protfolio.html">protfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+         </div>
+    
+        <div class="box">
+            
+    
+            <div class="bf-text">Follow Us</div>
+            <div class="icons">
+                <a href="https://web.facebook.com/doingdabarber" class="fa-brands fa-facebook-f"></a>
+                <a href="https://wa.me/+276478443567" class="fa-brands fa-whatsapp" target="_blank"></a>
+    
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="mailto:Maponyawitness@gmail.com" class="fa-solid fa-envelope"></a>
+    
+    
+            </div>
+            <div class="bf-text">Call Us</div>
+            <ul class="SayHi">
+                <li>Phone: <a href="tel:+27647844356">+27 64 784 4356</a></li>
+
+               
+            </ul>
+        </div>
+    
+        <div class="box">
+            
+    
+            
+    
+            <div class="bf-text">Find Us</div>
+    
+            <div class="address">
+                <a href="https://maps.app.goo.gl/UM7wYyPGKaWdNwZj8">Mentz Segoreng, Polokwane Town, South Africa</a>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!-- footer  -->
+    <footer>
+        <div class="fbox">Copyright &copy; 2023 Doing's Barbershop</div>
+        <div class="fbox">Powered By Doing's Barbershop</div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script>
+        
+    function sendWhatsAppMessage(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const number = document.getElementById('number').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+
+        const whatsappMessage = `Hello, my name is ${name}. I am interested in ${service}. My contact number is ${number}. Message: ${message}`;
+        const whatsappURL = `https://wa.me/+27765668747?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        window.open(whatsappURL, '_blank');
+    }
+</script>
+
+    </script>
+</body>
+
+</html>
