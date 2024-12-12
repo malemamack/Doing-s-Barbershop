@@ -257,7 +257,7 @@ header ul li #NavNum:hover {
     align-items: baseline;
     flex-direction: column;
     gap: 2rem;
-    max-width: 60%;
+    max-width: 100%;
 }
 
 .sectionFirst .frontPage .address {
@@ -270,6 +270,7 @@ header ul li #NavNum:hover {
 .sectionFirst .frontPage .heading {
     font-size: 3.24rem;
     font-weight: 400;
+    text-align: center;
     font-family: var(--font-02);
 }
 
@@ -310,6 +311,12 @@ header ul li #NavNum:hover {
     border: 1px solid var(--global-color-4);
     background-color: var(--global-color-1);
     color: var(--global-color-4);
+}
+
+.sectionFirst .frontPage .para{
+    text-align: center;
+    justify-self: center;
+
 }
 
 

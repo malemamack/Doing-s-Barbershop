@@ -40,7 +40,7 @@
     width: 100%;
     height: 100%;
     /* background-color: var(--global-color-2); */
-    background-image: url("../img/serviceBackGround.jpg");
+    background-image: url("../img/me1.jpg");
     z-index: -1;
     opacity: .7;
     background-position: center;
@@ -60,6 +60,7 @@
 .FormMap {
     display: flex;
     padding: 4rem 5%;
+    
 }
 
 .FormMap .map {
@@ -93,6 +94,13 @@
 }
 
 .FormMap .form .f-head {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    color: var(--global-color-0);
+}
+
+.FormMap .map .f-head {
     font-size: 2rem;
     font-weight: 400;
     font-family: var(--font-02);
@@ -148,4 +156,29 @@
 
 .FormMap .form form button:hover {
     background-color: var(--global-color-1);
+}
+
+.FormMap .map{
+    padding-left: 25px;
+    display: inline-block;
+}
+
+.scrolling-text {
+    
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
